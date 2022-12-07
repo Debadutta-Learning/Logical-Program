@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+//Write a Java program to check if the number is palindrome or not.
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        String str = sc.next();
+        StringBuffer sb = new StringBuffer(str);//Convert String to StringBuffer
+        sb.reverse();//Call the reverse method
+        String s = sb.toString();//Convert StringBuffer to String
+        if (str.equals(s)) {
+            System.out.println("Given String Is Palindrome");
+        } else {
+            System.out.println("Given String Is Not Palindrome");
+        }
+    }
+}
