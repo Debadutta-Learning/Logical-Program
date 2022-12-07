@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SwapTwoNumber {
+//Write a Java Program to swap two numbers without using the third variable.
+    //main method
+public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int fnum,snum;
+    System.out.print("Enter The FirstNumber: ");
+    fnum=sc.nextInt();
+    System.out.print("Enter The SecondNumber: ");
+    snum=sc.nextInt();
+    System.out.println("Before Swaping: "+fnum+" "+snum);
+    //Logic For Swaping
+    fnum=fnum+snum;
+    snum=fnum-snum;
+    fnum=fnum-snum;
+    System.out.println("After Swaping: "+fnum+" "+snum);
+}
+
+
+}

@@ -1,0 +1,47 @@
+//Write a Java program to Reverse a Number in Java
+//Approach 1(Using-While Loop)
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        //Approach-1(While Loop)
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter A Number: ");
+        int num = sc.nextInt();
+        System.out.println("Before Reverse: " + num);
+        int rev = 0;
+        while (num != 0) {
+            int n = num % 10;
+            rev = rev * 10 + n;
+            num = num / 10;
+        }
+        System.out.println("After Reverse: " + rev);
+
+    }
+}
+
+import java.util.Scanner;
+
+
+ //Approach-2(Using Recursion)
+public class ReverseNumber2 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        //Approach-2(Using Recursion)
+        System.out.println("Enter The Number");
+        int num=sc.nextInt();
+        System.out.println("Reverse Number: ");
+        revNum(num);
+
+    }
+    public static void revNum(int number){
+        if(number<10){
+            System.out.println(number);
+        }
+        else {
+            System.out.print(number%10);
+            revNum(number/10);
+        }
+    }
+}
+
